@@ -10,6 +10,7 @@ CREATE TABLE IF NOT EXISTS user_details (
          last_name 	VARCHAR(20)  NOT NULL DEFAULT '',
          password	VARCHAR(20)  NOT NULL DEFAULT '',
          type_user  INT UNSIGNED NOT NULL DEFAULT 0,
+         created_at	TIMESTAMP DEFAULT NOW(),
          -- 0-student, 1- faculty, 2- worker
          special   	INT UNSIGNED NOT NULL DEFAULT 0,
          -- 0-not special, 1-special
