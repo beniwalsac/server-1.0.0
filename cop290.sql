@@ -4,7 +4,7 @@ use cop290;
 select database();
 
 CREATE TABLE IF NOT EXISTS user_details (
-         -- userID    	INT UNSIGNED NOT NULL AUTO_INCREMENT,
+         userID    	INT UNSIGNED NOT NULL AUTO_INCREMENT,
          username  	VARCHAR(20)  NOT NULL DEFAULT '',
          first_name VARCHAR(20)  NOT NULL DEFAULT '',
          last_name 	VARCHAR(20)  NOT NULL DEFAULT '',
@@ -13,6 +13,7 @@ CREATE TABLE IF NOT EXISTS user_details (
          -- 0-student, 1- faculty, 2- worker
          special   	INT UNSIGNED NOT NULL DEFAULT 0,
          -- 0-not special, 1-special
+         api_key	CHAR(32) NOT NULL,
          PRIMARY KEY  (username)
        );
 INSERT INTO user_details (username, first_name, last_name, pwd, type_user, special) VALUES
